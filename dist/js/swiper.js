@@ -2294,7 +2294,7 @@
 
 
     // Fix For Negative Oversliding
-    if (activeIndex < loopedSlides) {
+    if (activeIndex < loopedSlides || this.clickedIndex <= loopedSlides/2) {
       newIndex = (slides.length - (loopedSlides * 3)) + activeIndex;
       newIndex += loopedSlides;
       var slideChanged = swiper.slideTo(newIndex, 0, false, true);
